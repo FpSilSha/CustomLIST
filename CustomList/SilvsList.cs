@@ -9,6 +9,13 @@ namespace CustomList
     class SilvsList
     {
 
+        private T[] items = new T[1];
+        public int Count { get; }
+
+        public void Add(T item)
+        {
+
+        }
 
     }
 }

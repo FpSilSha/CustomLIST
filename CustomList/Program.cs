@@ -21,7 +21,7 @@ namespace CustomList
             list.Count();
             list.Remove(15);
 
-            CustomList<int> myList = new CustomList<int>();
+            SilvsList<int> myList = new SilvsList<int>();
 
         }
     }

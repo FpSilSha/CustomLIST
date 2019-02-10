@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    class SilvsList
+   public class SilvsList<T>
     {
 
         private T[] items = new T[1];
-        public int Count { get; }
-
+        public int Count { get; }        
         public void Add(T item)
         {
+
 
         }
 

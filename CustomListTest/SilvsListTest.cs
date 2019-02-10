@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CustomList;
 
 namespace CustomListTest
 {
@@ -10,7 +11,7 @@ namespace CustomListTest
             public void TestMethod1()
             {
                 //Arrange
-                CustomList<int> myList = new CustomList<int>();
+                SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int expectedResult = 1;
                 //Act
@@ -22,8 +23,8 @@ namespace CustomListTest
             [TestMethod]
             public void TestMethod2()
             {
-                //Arrange
-                CustomList<int> myList = new CustomList<int>();
+            //Arrange
+            SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int expectedResult = 3;
                 //Act
@@ -35,8 +36,8 @@ namespace CustomListTest
             [TestMethod]
             public void TestMethod3()
             {
-                //Arrange
-                CustomList<int> myList = new CustomList<int>();
+            //Arrange
+            SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int value1 = 5;
                 int expectedResult = 3;
@@ -50,8 +51,8 @@ namespace CustomListTest
             [TestMethod]
             public void TestMethod4()
             {
-                //Arrange
-                CustomList<int> myList = new CustomList<int>();
+            //Arrange
+            SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int value1 = 5;
                 int expectedResult = 5;

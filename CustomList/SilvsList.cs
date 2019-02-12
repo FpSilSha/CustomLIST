@@ -9,18 +9,22 @@ namespace CustomList
 {
     public class SilvsList<T>
     {
-        private int nextIndex = 0;
+      
         private T[] items = new T[4];
-        public int Count { get; }
+        private int nextIndex = 0;
+        private int count = 0;
+        public int Count { get { return count; } }
         public void Add(T item)
         
         {
             items[nextIndex] = item;
             nextIndex++;
+            count++;
         }
 
-
+     
       
+        
  
     }
 }

@@ -24,7 +24,8 @@ namespace CustomList
             list.Remove(15);
 
             SilvsList<int> myList = new SilvsList<int>();
-           
+            myList.Add(2);
+            Console.WriteLine(myList);
         }
     }
 }

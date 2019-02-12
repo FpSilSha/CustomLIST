@@ -22,9 +22,15 @@ namespace CustomList
             count++;
         }
 
-     
+        public T this[int index]
+        {
+            
+            get { return items[index]; }
+
+        }
+
+
       
-        
- 
+
     }
 }

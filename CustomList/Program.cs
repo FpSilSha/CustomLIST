@@ -12,6 +12,8 @@ namespace CustomList
         {
 
             List<int> list = new List<int>();
+            List<string> list2 = new List<string>();
+            
             list.Add(2);
             list.Add(4);
             list.Add(6);
@@ -22,7 +24,7 @@ namespace CustomList
             list.Remove(15);
 
             SilvsList<int> myList = new SilvsList<int>();
-
+           
         }
     }
 }

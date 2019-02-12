@@ -8,7 +8,7 @@ namespace CustomListTest
     public class SilvsListTest
     {
             [TestMethod]
-            public void TestMethod1()
+            public void ListAdd_AnyValue_CountIncreases()
             {
                 //Arrange
                 SilvsList<int> myList = new SilvsList<int>();
@@ -21,10 +21,10 @@ namespace CustomListTest
                 Assert.AreEqual(expectedResult, myList.Count);
             }
             [TestMethod]
-            public void TestMethod2()
+            public void ListAdd_AnyValue_ValueAdded()
             {
             //Arrange
-            SilvsList<int> myList = new SilvsList<int>();
+                SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int expectedResult = 3;
                 //Act
@@ -34,10 +34,10 @@ namespace CustomListTest
                 Assert.AreEqual(expectedResult, myList[0]);
             }
             [TestMethod]
-            public void TestMethod3()
+            public void ListAdd_TwoValues_ValueAtZeroIsFirstValue()
             {
             //Arrange
-            SilvsList<int> myList = new SilvsList<int>();
+                SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int value1 = 5;
                 int expectedResult = 3;
@@ -49,10 +49,10 @@ namespace CustomListTest
                 Assert.AreEqual(expectedResult, myList[0]);
             }
             [TestMethod]
-            public void TestMethod4()
+            public void ListAdd_TwoValues_ValueAtOneIsSecondValue()
             {
             //Arrange
-            SilvsList<int> myList = new SilvsList<int>();
+                SilvsList<int> myList = new SilvsList<int>();
                 int value = 3;
                 int value1 = 5;
                 int expectedResult = 5;
@@ -62,6 +62,14 @@ namespace CustomListTest
 
                 //Assert
                 Assert.AreEqual(expectedResult, myList[1]);
+            }
+            [TestMethod]
+            public void ListAdd_CollectionsValue_ValuesAdded()
+            {
+
+                SilvsList<int> myList = new SilvsList<int>() { 2, 1, 3, 4 };
+            int expectedResult = myList[3];
+            Assert.AreEqual(expectedResult, 4);
             }
     }
 }

@@ -73,8 +73,21 @@ namespace CustomListTest
 
             int expectedValue = 2;
 
+            Assert.AreEqual(expectedValue, myList.Count);         
+        }
+        [TestMethod]
+
+        public void ListRemove_SingleValue_CountDecreases()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+
+            myList.Add(2);
+            myList.Add(3);
+            myList.Remove(3);
+
+            int expectedValue = 1;
+
             Assert.AreEqual(expectedValue, myList.Count);
-           
 
         }
         //[TestMethod]

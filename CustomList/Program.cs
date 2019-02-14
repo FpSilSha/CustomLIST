@@ -22,10 +22,13 @@ namespace CustomList
             list.Add(15);
             list.Count();
             list.Remove(15);
-
+            list.Remove(15);
+            Console.WriteLine(list[5]);
+           
             SilvsList<int> myList = new SilvsList<int>();
             myList.Add(2);
             Console.WriteLine(myList);
+            Console.ReadKey();
         }
     }
 }

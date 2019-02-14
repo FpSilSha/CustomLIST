@@ -90,6 +90,20 @@ namespace CustomListTest
             Assert.AreEqual(expectedValue, myList.Count);
 
         }
+        [TestMethod]
+        public void ListRemove_SingleValue_ItemRemoved()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+
+            myList.Add(2);
+            myList.Add(5);
+            myList.Remove(5);
+
+
+
+            Assert.AreEqual(myList, 2);
+        }
+       
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

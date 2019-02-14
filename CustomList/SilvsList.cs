@@ -49,6 +49,9 @@ namespace CustomList
             items = tempArray;
 
         }
+
+
+
         public IEnumerator GetEnumerator()
         {
             for (int index = 0; index < Count; index++)

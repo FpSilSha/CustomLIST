@@ -27,7 +27,12 @@ namespace CustomList
             Console.WriteLine(list2);
             Console.WriteLine(list);
             SilvsList<int> myList = new SilvsList<int>();
-            
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+
             Console.WriteLine(myList[1]);
             Console.ReadKey();
         }

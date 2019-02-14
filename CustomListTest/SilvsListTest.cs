@@ -149,7 +149,7 @@ namespace CustomListTest
             Assert.AreEqual(5, myList[1]);
         }
         [TestMethod]
-        public void ListMinusOperator_SingleValueList_ValuesOfListRemoved()
+        public void ListMinusOperator_SingleValueRemoved_ValuesOfListRemoved()
         {
             SilvsList<int> myList = new SilvsList<int>();
             SilvsList<int> myList2 = new SilvsList<int>();
@@ -169,8 +169,64 @@ namespace CustomListTest
             Assert.AreEqual(resultList[0], expectedList[0]);
             Assert.AreEqual(resultList[1], expectedList[1]);
         }
-        
+        [TestMethod]
+        public void ListMinusOperator_MultiValuesRemoved_ValuesOfListRemoved()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
 
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(3);
+
+            myList2.Add(4);
+            myList2.Add(2);
+            myList2.Add(1);
+
+            SilvsList<int> resultList = myList - myList2;
+            
+            
+            Assert.AreEqual(resultList[0], 3);
+
+        }
+        [TestMethod]
+        public void ListMinusOperator_MultiValuesRemoved_CountCorrect()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
+
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(3);
+
+            myList2.Add(4);
+            myList2.Add(2);
+            myList2.Add(1);
+
+            SilvsList<int> resultList = myList - myList2;
+
+            Assert.AreEqual(resultList.Count, 1);
+        }
+        [TestMethod]
+        // If list has 3 values that are equal and the list instance is removing the same values only twice, the third should remain.
+        public void ListMinusOperator_MultiValuesRemoved_OnlyCorrectAmountRemoved()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
+
+            myList.Add(1);
+            myList.Add(1);
+            myList.Add(1);
+
+            myList2.Add(4);
+            myList2.Add(1);
+            myList2.Add(1);
+
+            SilvsList<int> resultList = myList - myList2;
+
+            Assert.AreEqual(resultList[0], 1);
+        }
+      
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

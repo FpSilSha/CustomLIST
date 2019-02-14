@@ -103,7 +103,14 @@ namespace CustomListTest
 
             Assert.AreEqual(myList, 2);
         }
-       
+        [TestMethod]
+        public void ListRemove_SingleValue_ListEmpty()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+
+            Assert.AreEqual(0, myList.Count);
+
+        }
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

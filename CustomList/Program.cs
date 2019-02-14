@@ -19,6 +19,7 @@ namespace CustomList
             list.Add(1);
             list.Add(24);
             list.Add(13);
+            Console.WriteLine(list[6]);
             list.Add(15);
             list.Count();
             list.Remove(15);

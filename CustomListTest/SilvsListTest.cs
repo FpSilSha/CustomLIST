@@ -184,8 +184,8 @@ namespace CustomListTest
             myList2.Add(1);
 
             SilvsList<int> resultList = myList - myList2;
-            
-            
+
+
             Assert.AreEqual(resultList[0], 3);
 
         }
@@ -208,7 +208,7 @@ namespace CustomListTest
             Assert.AreEqual(resultList.Count, 1);
         }
         [TestMethod]
-        // If list has 3 values that are equal and the list instance is removing the same values only twice, the third should remain.
+        If list has 3 values that are equal and the list instance is removing the same values only twice, the third should remain.
         public void ListMinusOperator_MultiValuesRemoved_OnlyCorrectAmountRemoved()
         {
             SilvsList<int> myList = new SilvsList<int>();

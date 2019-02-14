@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class SilvsList<T>
+    public class SilvsList<T>:IEnumerable
     {
 
         private T[] items = new T[4];
@@ -31,7 +31,7 @@ namespace CustomList
 
         public T this[int index]
         {
-
+           
             get { return items[index]; }
 
         }
@@ -46,7 +46,15 @@ namespace CustomList
             items = tempArray;
 
         }
-        
+        public IEnumerator GetEnumerator()
+        {
+            for (int index = 0; index < Count; index++)
+            {
+                yield return items[index];
+            }
+
+               
+        }
 
 
     }

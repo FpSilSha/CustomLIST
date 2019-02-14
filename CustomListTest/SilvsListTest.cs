@@ -226,7 +226,19 @@ namespace CustomListTest
 
             Assert.AreEqual(resultList[0], 1);
         }
-      
+        [TestMethod]
+        public void ListAdd_MultiValuesAdded_ListBuildsAnotherArrayToHold()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+
+            Assert.AreEqual(myList.Length, 8);
+        }
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

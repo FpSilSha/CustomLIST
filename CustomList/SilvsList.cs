@@ -33,7 +33,10 @@ namespace CustomList
         {
            
             get { return items[index]; }
-
+            set
+            {
+                items[index] = value;
+            }
         }
         private void CapacityExtender()
         {

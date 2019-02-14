@@ -148,6 +148,22 @@ namespace CustomListTest
 
             Assert.AreEqual(5, myList[1]);
         }
+        [TestMethod]
+        public void ListMinusOperator_SingleValueList_ValuesOfListRemoved()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
+
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(3);
+
+            myList2.Add(4);
+            myList2.Add(5);
+            myList2.Add(1);
+
+            SilvsList<int> resultList = myList - myList2;
+        }
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

@@ -268,7 +268,7 @@ namespace CustomListTest
             Assert.AreSame(myList[0], "hello");
         }
         [TestMethod]
-        public void ListOperator_AddMultiValues_ValuesAddedToEnd()
+        public void ListPlusOperator_AddMultiValues_ValuesAddedToEnd()
         {
             SilvsList<int> myList = new SilvsList<int>();
             SilvsList<int> myList2 = new SilvsList<int>();
@@ -288,7 +288,7 @@ namespace CustomListTest
 
         }
         [TestMethod]
-        public void ListAddOperator_AddMultiValues_CountIsProper()
+        public void ListPlusOperator_AddMultiValues_CountIsProper()
         {
             SilvsList<int> myList = new SilvsList<int>();
             SilvsList<int> myList2 = new SilvsList<int>();
@@ -306,7 +306,7 @@ namespace CustomListTest
             Assert.AreEqual(resultList.Count, 6);
         }
         [TestMethod]
-        public void ListAddOperator_AddMultiValues_LengthIncreases()
+        public void ListPlusOperator_AddMultiValues_LengthIncreases()
         {
             SilvsList<int> myList = new SilvsList<int>();
             SilvsList<int> myList2 = new SilvsList<int>();
@@ -323,10 +323,16 @@ namespace CustomListTest
 
             Assert.AreEqual(resultList.Length, 8);
         }
+        [TestMethod]
+        public void ListZip_ZipListTogether_CountIncreases()
+        {
+            SilvsList<int> myList = new SilvsList<int>() { 1, 3, 5 };
+            SilvsList<int> myList2 = new SilvsList<int>() { 2, 4, 6 };
 
+            myList = myList.Zip(myList2);
 
-
-
-
+            Assert.AreEqual(myList.Count, 6);
+        }
+   
     }
 }

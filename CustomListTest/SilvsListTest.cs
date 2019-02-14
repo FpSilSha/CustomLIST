@@ -267,5 +267,32 @@ namespace CustomListTest
 
             Assert.AreSame(myList[0], "hello");
         }
+        [TestMethod]
+        public void ListPlusOperator_AddMultiValues_ValuesAddedToEnd()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
+
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(5);
+
+            myList2.Add(4);
+            myList2.Add(7);
+            myList2.Add(6);
+
+            SilvsList<int> resultList = myList + myList2;
+
+            Assert.AreEqual(resultList[0], 1);
+            Assert.AreEqual(resultList[3], 4);
+
+        }
+        
+
+
+
+
+
+
     }
 }

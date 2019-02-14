@@ -159,7 +159,17 @@ namespace CustomListTest
 
             Assert.IsTrue(trueOrFalse);
         }
-      
+        [TestMethod]
+        public void ListRemove_SingleValue_FalseIfNotRemoved()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            myList.Add(5);
+            myList.Add(5);
+            myList.Add(5);
+            bool trueOrFalse = myList.Remove(6);
+
+            Assert.IsFalse(trueOrFalse);
+        }
         [TestMethod]
         public void ListMinusOperator_SingleValueRemoved_ValuesOfListRemoved()
         {

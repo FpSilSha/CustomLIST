@@ -305,7 +305,24 @@ namespace CustomListTest
 
             Assert.AreEqual(resultList.Count, 6);
         }
+        [TestMethod]
+        public void ListAddOperator_AddMultiValues_LengthIncreases()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            SilvsList<int> myList2 = new SilvsList<int>();
 
+            myList.Add(1);
+            myList.Add(2);
+            myList.Add(5);
+
+            myList2.Add(4);
+            myList2.Add(7);
+            myList2.Add(6);
+
+            SilvsList<int> resultList = myList + myList2;
+
+            Assert.AreEqual(resultList.Length, 8);
+        }
 
 
 

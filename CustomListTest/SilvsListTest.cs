@@ -258,5 +258,14 @@ namespace CustomListTest
             Assert.AreEqual(myList.Count, 4);
         
         }
+        [TestMethod]
+        public void ListAdd_StringValue_StringAdded()
+        {
+            SilvsList<string> myList = new SilvsList<string>();
+
+            myList.Add("Hello");
+
+            Assert.AreSame(myList[0], "hello");
+        }
     }
 }

@@ -163,7 +163,14 @@ namespace CustomListTest
             myList2.Add(1);
 
             SilvsList<int> resultList = myList - myList2;
+            SilvsList<int> expectedList = new SilvsList<int>();
+            expectedList.Add(2);
+            expectedList.Add(3);
+            Assert.AreEqual(resultList[0], expectedList[0]);
+            Assert.AreEqual(resultList[1], expectedList[1]);
         }
+        
+
         //[TestMethod]
         //public void ListAdd_CollectionsValue_ValuesAdded()
         //{

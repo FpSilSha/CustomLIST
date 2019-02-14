@@ -249,6 +249,14 @@ namespace CustomListTest
             Assert.AreEqual(expectedResult, 4);
             Assert.AreEqual(expectedResult2, 2);
         }
+        [TestMethod]
+        public void ListAdd_CollectionsValue_countIsProper()
+        {
 
+            SilvsList<int> myList = new SilvsList<int>() { 2, 1, 3, 4 };
+            
+            Assert.AreEqual(myList.Count, 4);
+        
+        }
     }
 }

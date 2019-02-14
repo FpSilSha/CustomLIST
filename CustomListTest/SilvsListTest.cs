@@ -107,8 +107,21 @@ namespace CustomListTest
         public void ListRemove_SingleValue_ListEmpty()
         {
             SilvsList<int> myList = new SilvsList<int>();
+            myList.Add(5);
+            myList.Remove(5);
 
             Assert.AreEqual(0, myList.Count);
+
+        }
+        [TestMethod]
+        public void ListRemove_SingleValue_ListShifts()
+        {
+            SilvsList<int> myList = new SilvsList<int>();
+            myList.Add(1);
+            myList.Add(2);
+            myList.Remove(1);
+
+            Assert.AreEqual(2, myList[0]);
 
         }
         //[TestMethod]

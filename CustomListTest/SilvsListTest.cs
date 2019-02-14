@@ -344,7 +344,20 @@ namespace CustomListTest
             Assert.AreEqual(myList[0], 1);
             Assert.AreEqual(myList[5], 6);
         }
-      
+        [TestMethod]
+        public void ListZip_ZipListTogether_ValuesAddedInCorrectPlace()
+        {
+            SilvsList<int> myList = new SilvsList<int>() { 1, 3, 5 };
+            SilvsList<int> myList2 = new SilvsList<int>() { 2, 4, 6 };
+
+            myList = myList.Zip(myList2);
+
+            Assert.AreEqual(myList[0], 1);
+            Assert.AreEqual(myList[1], 2);
+            Assert.AreEqual(myList[4], 5);
+            Assert.AreEqual(myList[5], 6);
+
+        }
 
     }
 }
